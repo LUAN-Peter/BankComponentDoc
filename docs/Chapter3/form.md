@@ -17,6 +17,7 @@
 |  参数   | 说明  | 传入类型 | 参考值 | 默认值 |
 |:----|:----|:---- |:----|:----|
 | value  | 绑定的值 | String | - | null |
+| disabled | 是否禁用 | Boolean | true/false | false |
 | placeholder  | 占位文字 | String | - | null |
 | label | 标签 | String | - | null |
 | prefix-icon | 头部图标url | String | - | null |
