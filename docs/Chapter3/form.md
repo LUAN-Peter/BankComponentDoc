@@ -8,14 +8,20 @@
     :disabled = "false"
     :placeholder = "placeholder"
     label = "标签"
-    prefixicon = "data:image/png;base64,*********"
+    prefixicon = "preicon"
     :prefixiconclick="handlePre"
-    suffixicon = "data:image/png;base64,*********"
+    suffixicon = "preicon"
     :suffixiconclick="handleSuf"
     :ispassword = "true"
     errinfo = "错误信息"
     @blur="blur"
     @change="change"></s-input>
+```  
+
+```javascript
+//头部和尾部图标需要引入，否则图片无法解析，可能是因为解析成String没有解析成url
+import preicon from "../prefixurl/xx.png"       
+import suficon from "../suffixurl/yy.png"
 ```
 
 **属性**  
@@ -27,16 +33,14 @@
 | disabled | 是否禁用 | Boolean | true/false | false |
 | placeholder  | 占位文字 | String | - | - |
 | label | 标签 | String | - | - |
-| prefixicon | 头部图标base64 | String | - | - |  
-| suffixicon | 尾部图标base64 |  String | - | - |
+| prefixicon | 头部图标url(注意import!) | String | - | - |  
+| suffixicon | 尾部图标url(注意import!) |  String | - | - |
 | ispassword | 显示密码文本 |  Boolean | true/false| false |
 | ~~maxlength~~ | ~~最大输入文本长度~~ | ~~Number~~ | ~~-~~ | ~~-1(此时不限制)~~ |
 | background | 输入框背景颜色 | String | white/grey | white |
 | errinfo | 错误提示信息 | String | - | - |
 
->_prefixicon和suffixicon想传url，但搞了两天没搞出来。_  
-
->_maxlength样式不明确_
+>_maxlength样式不明确，搁置。_
 
 **事件**  
 
